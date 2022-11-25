@@ -198,7 +198,7 @@ export default function Home() {
                                         setDisplayedContentIndex(4);
                                         setMobileNavShown(!mobileNavShown);
                                     }}
-                                >RESIDENCES</span>
+                                >RESIDENCESw</span>
                             </div>
                         </div>
                         <div className="my-10">
