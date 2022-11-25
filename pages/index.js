@@ -35,7 +35,7 @@ export default function Home() {
             case 2: return "bg-space";
             case 3: return "bg-physical";
             case 4: return "bg-luxury";
-            default: return "bg-avatar";
+            
         }
 
 
@@ -257,7 +257,7 @@ export default function Home() {
                 </div>
 
                 <div className={`container-fluid w-full container-full h-full m-0 p-0 z-50 absolute inset-0 ${mobileNavShown ? 'hidden' : 'block'}`}>
-                    <div className={`container-bg h-full w-full m-0 p-0 ${getBackgroundClass()}`}>
+                    <div className={`container-bg bg-black h-full w-full m-0 p-0 ${getBackgroundClass()}`}>
                         <div className={`container-row h-full mx-0 p-0`}>
                             <>
                                 <div className="justify-center items-center border-black">
