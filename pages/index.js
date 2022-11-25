@@ -149,6 +149,7 @@ export default function Home() {
             <div className='bg-private hidden'/>
             <div className='bg-luxury hidden'/>
             <div className='bg-space hidden'/>
+            
             <Head>
                 <title>{AppConstant.meta.title}</title>
             </Head>
