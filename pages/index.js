@@ -14,13 +14,11 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from 'react';
 
 
+
+
 import ReactDOM from "react-dom";
 import Modal from "react-bootstrap/Modal";
 import Form from 'react-bootstrap/Form'
-import ModalBody from "react-bootstrap/ModalBody";
-import ModalHeader from "react-bootstrap/ModalHeader";
-import ModalFooter from "react-bootstrap/ModalFooter";
-import ModalTitle from "react-bootstrap/ModalTitle";
 
 import axios from "axios";
 import { notification } from 'antd';
@@ -35,7 +33,7 @@ export default function Home() {
             case 2: return "bg-space";
             case 3: return "bg-physical";
             case 4: return "bg-luxury";
-            
+            default: return "";
         }
 
 
@@ -257,7 +255,7 @@ export default function Home() {
                 </div>
 
                 <div className={`container-fluid w-full container-full h-full m-0 p-0 z-50 absolute inset-0 ${mobileNavShown ? 'hidden' : 'block'}`}>
-                    <div className={`container-bg bg-black h-full w-full m-0 p-0 ${getBackgroundClass()}`}>
+                    <div className={`container-bg bg-black h-full w-full m-0 p-0 bg-avatar ${getBackgroundClass()}`}>
                         <div className={`container-row h-full mx-0 p-0`}>
                             <>
                                 <div className="justify-center items-center border-black">
@@ -526,8 +524,7 @@ export default function Home() {
 
                                 </div>
                             }
-                            {
-                                displayedContentIndex === 1 &&
+                            {displayedContentIndex === 1 &&
                                 <div className="container-fluid container-body w-full flex  items-end body-private px-0 mx-0 pr-0 flex-end absolute bottom-36">
                                     <div className="w-2/5 mx-0 pl-16 box-left ">
                                         <div className="text-white">
