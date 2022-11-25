@@ -13,6 +13,7 @@ import { faInstagram, faLinkedin, faDiscord, faTwitter } from "@fortawesome/free
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from 'react';
 
+import preloader from "../public/images/44-preloader.gif";
 
 
 
@@ -26,6 +27,7 @@ import { notification } from 'antd';
 export default function Home() {
     const [displayedContentIndex, setDisplayedContentIndex] = useState(0);
     const [mobileNavShown, setMobileNavShown] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     const getBackgroundClass = () => {
         switch (displayedContentIndex) {
             case 0: return "bg-avatar";
@@ -140,15 +142,23 @@ export default function Home() {
         setIsOpen(false);
     };
 
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 6000)
+    }, [])
 
 
+if(isLoading) {
+    return (
+        <div className="preloader flex items-center justify-center">
+            <Image src={preloader} alt="Loading..." className="absolute mx-0" />
+        </div>
+    )
+} 
     return (
         <>
-            <div className='bg-avatar hidden'/>
-            <div className='bg-physical hidden'/>
-            <div className='bg-private hidden'/>
-            <div className='bg-luxury hidden'/>
-            <div className='bg-space hidden'/>
+            
             
             <Head>
                 <title>{AppConstant.meta.title}</title>
