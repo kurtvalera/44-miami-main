@@ -267,6 +267,17 @@
  .nav-item:hover > .nav-a {
      color:white;
 }
+
+body:after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url('../public/images/avatar-bg.png') url('../public/images/private-bg.png') url('../public/images/space-bg.png') url('../public/images/physical-bg.png') url('../public/images/luxury-bg.png');
+}
+
+
  .bg-avatar {
      background-image: url('../public/images/avatar-bg.png');
      background-size: cover;
